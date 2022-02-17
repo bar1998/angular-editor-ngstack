@@ -28,7 +28,7 @@ export class AppComponent {
   options = {
     contextmenu: true,
     minimap: {
-      enabled: false,
+      enabled: true,
     },
   };
 
@@ -36,7 +36,8 @@ export class AppComponent {
     console.log('CODE', value);
   }
 
-  aaa() {
-    this.codeModel.value = 'asdads';
+  changeCode() {
+    console.log('CODE CHANGE');
+    this.codeModel = { ...this.codeModel, value: 'some other code' };
   }
 }
